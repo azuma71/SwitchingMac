@@ -1,0 +1,19 @@
+# Xcode / XcodeGen
+*.xcodeproj/
+*.xcworkspace/
+!*.xcodeproj/project.pbxproj
+DerivedData/
+build/
+.build/
+*.xcuserstate
+xcuserdata/
+
+# macOS
+.DS_Store
+
+# 秘密情報
+.env
+.env.*
+
+# XcodeGen の生成物
+Sources/SwitchingMac/Info.plist
