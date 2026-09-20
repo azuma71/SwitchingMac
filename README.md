@@ -38,6 +38,30 @@ ON / OFF それぞれのコマンドを登録して、独自のスイッチを�
 - macOS 14.0 以降
 - ビルドには Xcode 16 以降（開発時の確認は Xcode 26.6 / Swift 6.3）
 
+## 導入（自分の別の Mac で使う）
+
+配布用の zip を作成します。作成した zip は `dist/` に出力されます（Git 管理外）。
+
+```sh
+./scripts/build-release.sh
+```
+
+できた `dist/SwitchingMac-<version>.zip` を AirDrop や iCloud Drive で別の Mac へ渡し、
+展開したフォルダで次を実行すると `/Applications` に導入されます。
+
+```sh
+bash install.sh
+```
+
+`install.sh` は、コピー・隔離属性の解除・（必要な場合のみ）ad-hoc 署名の付け直し・起動までを行います。
+導入先を変えたい場合は `INSTALL_DIR=~/Applications bash install.sh` のように指定できます。
+zip には利用者向けの `INSTALL.txt` が同梱されます。
+
+> [!NOTE]
+> 現在は Apple Developer Program の証明書を使わない ad-hoc 署名のため、
+> 他の Mac へコピーすると Gatekeeper に止められます。`install.sh` がこれを解除します。
+> 署名と公証（Notarization）を行えば、この手順は不要になります。
+
 ## ビルド
 
 `.xcodeproj` は `project.yml` から生成する方式のため、リポジトリには含めていません。

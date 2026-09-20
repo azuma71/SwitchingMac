@@ -17,3 +17,7 @@ xcuserdata/
 
 # XcodeGen の生成物
 Sources/SwitchingMac/Info.plist
+
+# 配布物
+dist/
+.build/
