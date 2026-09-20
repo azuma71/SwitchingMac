@@ -20,22 +20,28 @@ public enum BuiltinSwitchCatalog {
             sortOrder: 1
         ),
         .builtin(
+            kind: .preventLidSleep,
+            title: "蓋を閉じてもスリープしない",
+            symbolName: "laptopcomputer",
+            sortOrder: 2
+        ),
+        .builtin(
             kind: .wifi,
             title: "Wi-Fi",
             symbolName: "wifi",
-            sortOrder: 2
+            sortOrder: 3
         ),
         .builtin(
             kind: .hiddenFiles,
             title: "隠しファイルを表示",
             symbolName: "eye.fill",
-            sortOrder: 3
+            sortOrder: 4
         ),
         .builtin(
             kind: .dockAutohide,
             title: "Dock を自動的に非表示",
             symbolName: "dock.rectangle",
-            sortOrder: 4
+            sortOrder: 5
         ),
     ]
 

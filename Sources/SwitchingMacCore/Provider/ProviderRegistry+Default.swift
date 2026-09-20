@@ -8,6 +8,7 @@ public extension ProviderRegistry {
         ProviderRegistry(providers: [
             DarkModeProvider(runner: runner),
             SleepPreventionProvider(),
+            PreventLidSleepProvider(runner: runner),
             WiFiProvider(),
             DefaultsToggleProvider.hiddenFiles(runner: runner),
             DefaultsToggleProvider.dockAutohide(runner: runner),

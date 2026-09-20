@@ -85,6 +85,12 @@ struct SwitchListSettingsView: View {
                 Text(definition.kind.displayName)
                     .font(.caption2)
                     .foregroundStyle(.secondary)
+                if let caution = definition.kind.cautionNote {
+                    Text(caution)
+                        .font(.caption2)
+                        .foregroundStyle(.orange)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
 
             Spacer(minLength: 8)

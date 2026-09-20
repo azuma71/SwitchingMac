@@ -63,7 +63,13 @@ struct SwitchRowView: View {
 
     private var helpText: String {
         if let unavailableReason { return unavailableReason }
-        if state == .unknown { return "\(definition.title): 状態を取得できませんでした" }
-        return "\(definition.title): \(state.isOn ? "ON" : "OFF")"
+
+        let status = state == .unknown
+            ? "状態を取得できませんでした"
+            : (state.isOn ? "ON" : "OFF")
+        guard let caution = definition.kind.cautionNote else {
+            return "\(definition.title): \(status)"
+        }
+        return "\(definition.title): \(status)\n\(caution)"
     }
 }

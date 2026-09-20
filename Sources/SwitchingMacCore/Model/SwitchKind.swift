@@ -9,6 +9,8 @@ public enum SwitchKind: String, Codable, Sendable, CaseIterable {
     case darkMode
     /// スリープ・画面オフの抑止
     case preventSleep
+    /// 蓋を閉じてもスリープさせない（システム全体のスリープ無効化）
+    case preventLidSleep
     /// Wi-Fi インターフェースの電源
     case wifi
     /// Finder の隠しファイル表示
